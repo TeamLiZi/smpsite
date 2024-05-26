@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiZi SMP 历史事件表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+<h2>LiZi SMP 历史事件表</h2>
+
+<table>
+    <tr>
+        <th>日期</th>
+        <th>事件</th>
+    </tr>
+    <tr>
+        <td>约2020年初</td>
+        <td>MCHSH1013尝试开了他的第一个服务器</td>
+    </tr>
+    <tr>
+        <td>2020年5月2日</td>
+        <td>村庄服务器开启</td>
+    </tr>
+    <tr>
+        <td>2020年8月23日</td>
+        <td>以苦力怕头像为标志的RPG服务器开启</td>
+    </tr>
+    <tr>
+        <td>2021年7月1日</td>
+        <td>MCHSH1013受ProRtx邀请加入TOP</td>
+    </tr>
+    <tr>
+        <td>2021年7月18日</td>
+        <td>离子组织成立</td>
+    </tr>
+    <tr>
+        <td>2021年11月14日</td>
+        <td>离子2B2T开服，版本为1.12.2</td>
+    </tr>
+    <tr>
+        <td>2022年1月22日</td>
+        <td>服务器QQ群建立</td>
+    </tr>
+    <tr>
+        <td>2022年3月23日</td>
+        <td>第一代主城被Naixi不慎破坏，S1结束</td>
+    </tr>
+        <td>2022年4月</td>
+        <td>第二代主城由ProRtx建立，S2开始</td>
+    </tr>
+    <tr>
+        <td>2022年5月</td>
+        <td>MCHSH1013为服务器加入了第三代主城，服务器升级至1.16.5，S2结束，S3开始</td>
+    </tr>
+    <tr>
+        <td>2022年5月15日</td>
+        <td>服务器手册发布</td>
+    </tr>
+    <tr>
+        <td>2022年6月1日</td>
+        <td>LiZi Base第一期竣工</td>
+    </tr>
+    <tr>
+        <td>2022年6月4日</td>
+        <td>服务器第一支宣传片发布</td>
+    </tr>
+    <tr>
+        <td>2022年6月10日</td>
+        <td>服务器颁布32K禁令</td>
+    </tr>
+    <tr>
+        <td>2022年6月11日</td>
+        <td>服务器不知原因异常卡顿，腐竹优化了服务器</td>
+    </tr>
+    <tr>
+        <td>2022年6月20日</td>
+        <td>服务器卡顿原因解决</td>
+    </tr>
+    <tr>
+        <td>2022年7月和8月</td>
+        <td>服务器开服以来最热闹的二个月</td>
+    </tr>
+    <tr>
+        <td>2022年9月18日</td>
+        <td>32K禁令解除</td>
+    </tr>
+    <tr>
+        <td>2022年10月1日</td>
+        <td>Naixi为本服务器进行了技术支持，S3结束，S4开始</td>
+    </tr>
+    <tr>
+        <td>2022年11月14日</td>
+        <td>服务器开服1周年</td>
+    </tr>
+    <tr>
+        <td>2023年1月3日</td>
+        <td>服务器大整改，主城合并至废墟世界，S4结束，S5开始</td>
+    </tr>
+    <tr>
+        <td>2023年1月</td>
+        <td>第一次服务器大战</td>
+    </tr>
+    <tr>
+        <td>2023年7月</td>
+        <td>第二次服务器大战</td>
+    </tr>
+    <tr>
+        <td>2023年8月</td>
+        <td>服务器更名LiZi SMP</td>
+    </tr>
+    <tr>
+        <td>2023年11月14日</td>
+        <td>服务器开服2周年</td>
+    </tr>
+    <tr>
+        <td>2024年2月4日</td>
+        <td>服务器升级至1.20.4</td>
+    </tr>
+    <tr>
+        <td>2024年5月19日</td>
+        <td>服务器第二支宣传片发布</td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+        <td id="currentDate"></td>
+        <td>事件时时刻刻都在发生</td>
+    </tr>
+</table>
+
+<script>
+    // 获取最后一行日期单元格
+    var lastRowDateCell = document.getElementById("currentDate");
+
+    // 更新日期函数
+    function updateDate() {
+        var currentDate = new Date();
+        var year = currentDate.getFullYear();
+        var month = (currentDate.getMonth() + 1).toString().padStart(2, "0");
+        var day = currentDate.getDate().toString().padStart(2, "0");
+        var formattedDate = year + "年" + month + "月" + day + "日";
+        lastRowDateCell.textContent = formattedDate;
+    }
+
+    // 每秒更新一次日期
+    setInterval(updateDate, 1000);
+</script>
+
+</body>
+</html>
